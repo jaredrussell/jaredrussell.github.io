@@ -11,7 +11,7 @@ Recently I had an issue where a tester had deleted a number of artifacts from RQ
 Thankfully the developer that responded in the thread was also kind enough to provide the necessary information to allow you to manually restore records through the REST API:
 
 {% codeblock %}
-https://server:port/qmservice/com.ibm.rqm.planning.common.service.rest.ITestCaseRestService/archiveTestCases?uuids_versionable=<test_case_uuid>&processArea=<project_uuid>&archive=false
+https://server:port/qm/service/com.ibm.rqm.planning.common.service.rest.ITestCaseRestService/archiveTestCases?uuids_versionable=<test_case_uuid>&processArea=<project_uuid>&archive=false
 {% endcodeblock %}
 
 
