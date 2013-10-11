@@ -109,7 +109,7 @@
 <p>Thankfully the developer that responded in the thread was also kind enough to provide the necessary information to allow you to manually restore records through the REST API:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://server:port/qmservice/com.ibm.rqm.planning.common.service.rest.ITestCaseRestService/archiveTestCases?uuids_versionable=&lt;test_case_uuid>&processArea=&lt;project_uuid>&archive=false</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://server:port/qm/service/com.ibm.rqm.planning.common.service.rest.ITestCaseRestService/archiveTestCases?uuids_versionable=&lt;test_case_uuid>&processArea=&lt;project_uuid>&archive=false</span></code></pre></td></tr></table></div></figure>
 
 
 <p>This is certainly a step in the right direction, however it leads to the next obvious question of how do I find the UUIDs of my test cases and project area? My first line of investigation was the <a href="http://open-services.net/">OSLC API</a> however this quickly hit a dead-end when I found that the OSLC API does not return deleted records.</p>
