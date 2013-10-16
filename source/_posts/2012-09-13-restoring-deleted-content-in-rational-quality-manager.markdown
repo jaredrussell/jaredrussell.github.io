@@ -15,11 +15,11 @@ https://server:port/qm/service/com.ibm.rqm.planning.common.service.rest.ITestCas
 {% endcodeblock %}
 
 
-This is certainly a step in the right direction, however it leads to the next obvious question of how do I find the UUIDs of my test cases and project area? My first line of investigation was the [OSLC API][3] however this quickly hit a dead-end when I found that the OSLC API does not return deleted records.
+This is certainly a step in the right direction, however it leads to the next obvious question of how do I find the UUIDs of my test cases and project area? My first line of investigation was the [OSLC API][3] however this quickly hit a dead-end when I found that it does not return deleted records.
 
 ## Reportable REST API to the rescue
 
-In the past I've had occasion to download the contents of individual test cases in XML format using the [RQM URL Utility][4] tool. This tool is invaluable when you are trying to write a custom configuration file for the [RQM Word and Excel][5] importer because it enables you to see the identifiers for custom sections. The examples you see in the URL utility documentation are all based on the [RQM Reportable REST API][6], which provides a means of both listing and viewing individual records within RQM.
+In the past I've used the [RQM URL Utility][4] tool to download the content of individual test cases in XML format. This tool is invaluable when you are trying to write a custom configuration file for the [RQM Word and Excel][5] importer because it allows you to see the identifiers for custom sections. The examples you see in the URL utility documentation are all based on the [RQM Reportable REST API][6] which provides a means of both listing and viewing individual records within RQM.
 
 Looking through the documentation I was able to find the solution to seeing the deleted records: the [includeArchived][7] query parameter. Performing a GET on the test case feed URI with this parameter set to true I was able to get an XML response that contained all of the test cases in my RQM project area, both active and deleted. The last remaining issue was to get the UUID of each of the test records, which is also catered for in the API via the [metadata][8] query parameter.
 
