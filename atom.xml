@@ -4,7 +4,7 @@
   <title><![CDATA[Jared Russell's Blog]]></title>
   <link href="http://jaredrussell.github.io/atom.xml" rel="self"/>
   <link href="http://jaredrussell.github.io/"/>
-  <updated>2013-10-11T20:10:27+01:00</updated>
+  <updated>2013-10-16T23:03:28+01:00</updated>
   <id>http://jaredrussell.github.io/</id>
   <author>
     <name><![CDATA[Jared Russell]]></name>
@@ -26,11 +26,11 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://server:port/qm/service/com.ibm.rqm.planning.common.service.rest.ITestCaseRestService/archiveTestCases?uuids_versionable=&lt;test_case_uuid>&processArea=&lt;project_uuid>&archive=false</span></code></pre></td></tr></table></div></figure>
 
 
-<p>This is certainly a step in the right direction, however it leads to the next obvious question of how do I find the UUIDs of my test cases and project area? My first line of investigation was the <a href="http://open-services.net/">OSLC API</a> however this quickly hit a dead-end when I found that the OSLC API does not return deleted records.</p>
+<p>This is certainly a step in the right direction, however it leads to the next obvious question of how do I find the UUIDs of my test cases and project area? My first line of investigation was the <a href="http://open-services.net/">OSLC API</a> however this quickly hit a dead-end when I found that it does not return deleted records.</p>
 
 <h2>Reportable REST API to the rescue</h2>
 
-<p>In the past I&rsquo;ve had occasion to download the contents of individual test cases in XML format using the <a href="https://jazz.net/wiki/bin/view/Main/RQMURLUtility">RQM URL Utility</a> tool. This tool is invaluable when you are trying to write a custom configuration file for the <a href="https://jazz.net/wiki/bin/view/Main/RQMExcelWordImporter">RQM Word and Excel</a> importer because it enables you to see the identifiers for custom sections. The examples you see in the URL utility documentation are all based on the <a href="https://jazz.net/wiki/bin/view/Main/RqmApi">RQM Reportable REST API</a>, which provides a means of both listing and viewing individual records within RQM.</p>
+<p>In the past I&rsquo;ve used the <a href="https://jazz.net/wiki/bin/view/Main/RQMURLUtility">RQM URL Utility</a> tool to download the content of individual test cases in XML format. This tool is invaluable when you are trying to write a custom configuration file for the <a href="https://jazz.net/wiki/bin/view/Main/RQMExcelWordImporter">RQM Word and Excel</a> importer because it allows you to see the identifiers for custom sections. The examples you see in the URL utility documentation are all based on the <a href="https://jazz.net/wiki/bin/view/Main/RqmApi">RQM Reportable REST API</a> which provides a means of both listing and viewing individual records within RQM.</p>
 
 <p>Looking through the documentation I was able to find the solution to seeing the deleted records: the <a href="https://jazz.net/wiki/bin/view/Main/RqmApi#includeArchived">includeArchived</a> query parameter. Performing a GET on the test case feed URI with this parameter set to true I was able to get an XML response that contained all of the test cases in my RQM project area, both active and deleted. The last remaining issue was to get the UUID of each of the test records, which is also catered for in the API via the <a href="https://jazz.net/wiki/bin/view/Main/RqmApi#metadata">metadata</a> query parameter.</p>
 
