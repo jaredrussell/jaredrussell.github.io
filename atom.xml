@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Jared Russell's Blog]]></title>
-  <link href="http://jaredrussell.github.io/atom.xml" rel="self"/>
-  <link href="http://jaredrussell.github.io/"/>
-  <updated>2013-10-16T23:03:28+01:00</updated>
-  <id>http://jaredrussell.github.io/</id>
+  <link href="http://jaredrussell.me.uk/blog/atom.xml" rel="self"/>
+  <link href="http://jaredrussell.me.uk/blog/"/>
+  <updated>2013-10-17T22:39:27+01:00</updated>
+  <id>http://jaredrussell.me.uk/blog/</id>
   <author>
     <name><![CDATA[Jared Russell]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Restoring deleted content in Rational Quality Manager]]></title>
-    <link href="http://jaredrussell.github.io/blog/2012/09/13/restoring-deleted-content-in-rational-quality-manager/"/>
+    <link href="http://jaredrussell.me.uk/blog/blog/2012/09/13/restoring-deleted-content-in-rational-quality-manager/"/>
     <updated>2012-09-13T15:44:00+01:00</updated>
-    <id>http://jaredrussell.github.io/blog/2012/09/13/restoring-deleted-content-in-rational-quality-manager</id>
+    <id>http://jaredrussell.me.uk/blog/blog/2012/09/13/restoring-deleted-content-in-rational-quality-manager</id>
     <content type="html"><![CDATA[<p>Recently I had an issue where a tester had deleted a number of artifacts from RQM by mistake and wanted to know how to restore them. My first port of call was the <a href="https://jazz.net/forum">jazz.net</a> forums hoping to find that RQM has an un-delete button that I had somehow missed, however I quickly found that this is <a href="https://jazz.net/forum/questions/74023/how-to-reinstate-a-deleted-test-case">not the case</a>.</p>
 
 <p>Thankfully the developer that responded in the thread was also kind enough to provide the necessary information to allow you to manually restore records through the REST API:</p>

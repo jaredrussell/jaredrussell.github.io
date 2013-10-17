@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://jaredrussell.github.io/sitemap.xml 
+Sitemap: http://jaredrussell.me.uk/blog/sitemap.xml 
