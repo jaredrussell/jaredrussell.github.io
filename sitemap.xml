@@ -2,24 +2,20 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://jaredrussell.me.uk/blog/blog/2012/09/13/restoring-deleted-content-in-rational-quality-manager/
+            http://jaredrussell.github.io/blog/2012/09/13/restoring-deleted-content-in-rational-quality-manager/
         </loc>
-        <lastmod>2013-10-17T22:13:04+01:00</lastmod>
+        <lastmod>2013-10-17T22:42:44+01:00</lastmod>
     </url>
     <url>
-        <loc>http://jaredrussell.me.uk/blog/robots.txt</loc>
+        <loc>http://jaredrussell.github.io/robots.txt</loc>
         <lastmod>2013-10-17T22:06:20+01:00</lastmod>
     </url>
     <url>
-        <loc>http://jaredrussell.me.uk/blog/blog/archives/</loc>
-        <lastmod>2013-10-17T22:13:04+01:00</lastmod>
+        <loc>http://jaredrussell.github.io/blog/archives/</loc>
+        <lastmod>2013-10-17T22:42:44+01:00</lastmod>
     </url>
     <url>
-        <loc>http://jaredrussell.me.uk/blog/archives/</loc>
-        <lastmod>2013-10-17T22:13:04+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://jaredrussell.me.uk/blog/</loc>
-        <lastmod>2013-10-17T22:13:04+01:00</lastmod>
+        <loc>http://jaredrussell.github.io/</loc>
+        <lastmod>2013-10-17T22:42:44+01:00</lastmod>
     </url>
 </urlset>
